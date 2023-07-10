@@ -3,13 +3,18 @@ import { AlertTriangle } from   'react-feather';
 
 export default function Warning() {
   return (
-    <div className=' bg-red-800 '>
-        <h1 className='font-bold text-4xl text-center'>Attention !!!</h1>
+    <div className='w-full h-screen bg-red-800  '>
+      <div className='w-full h-screen flex flex-col justify-center items-center'>
+        <h1 className='font-bold text-4xl text-center my-px'>Attention !!!</h1>
+      
         <AlertTriangle 
+        className='text-center'
         color='black'
         size={200}
         />
-        <p className='text-center text-2xl '>Ce site est certainement une tentative de phishing !!!</p>
+      
+        <p className='text-center text-2xl my-px '>Ce site est certainement une tentative de phishing !!!</p>
+        </div>
         </div>
   )
 }
