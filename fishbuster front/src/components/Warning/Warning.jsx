@@ -1,7 +1,7 @@
 import React from 'react'
 import { AlertTriangle } from   'react-feather';
 
-export default function Warning() {
+export default function Warning({domain}) {
   return (
     <div className='w-full h-screen bg-red-800  '>
       <div className='w-full h-screen flex flex-col justify-center items-center'>
