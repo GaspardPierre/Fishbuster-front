@@ -33,9 +33,10 @@ function App() {
 
   return (
     <>
-
-      <Warning />
-
+      {isMalicious ? <Warning /> :
+        <h1 className='text-center text-2xl md:text-3xl my-px font-lobster '
+        >Fishbuster</h1>
+      }
     </>
   )
 }
