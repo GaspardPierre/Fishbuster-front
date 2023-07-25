@@ -8,7 +8,7 @@ const checkBalance = async (token) => {
         return response.data;
     } catch (error) {
         console.error("error in balanceService.js", error);
-        return null;    
+        return { error: error };    
 
     }
 }

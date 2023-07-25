@@ -9,7 +9,7 @@ const checkMalicious = async (token,domain) => {
         return response.data;
     } catch (error) {
         console.error("error in maliciousService.js", error);
-        return null;
+        return { error: error };
     }
     }
 
