@@ -33,12 +33,24 @@ function App() {
 
   return (
     <>
-      {isMalicious ? <Warning /> :
-        <h1 className='text-center text-2xl md:text-3xl my-px font-lobster '
-        >Fishbuster</h1>
-      }
+      {isLoading ? (
+       //if the request is loading, display a loading component
+        <Loading />
+      ) : error ? (
+        // if there is an error, display the error
+        <p>{error}</p>
+      ) : isMalicious ? (
+        // if the domain is malicious, display the warning component
+        <Warning />
+      ) : (
+        // Sinon, afficher le titre de l'extension
+        <h1 className="text-center text-2xl md:text-3xl my-px font-lobster">
+          Fishbuster
+        </h1>
+      )}
     </>
-  )
+  );
+  
 }
 
 export default App
