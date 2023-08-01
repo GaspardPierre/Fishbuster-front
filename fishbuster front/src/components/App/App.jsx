@@ -1,40 +1,36 @@
-
-import React, { useEffect } from 'react';
-import { useStore } from 'zustand/react';
-import store from '../../store';
-import './App.css';
-import Warning from '../Warning/Warning';
-import checkMalicious from '../../services/maliciousService';
+import React, { useEffect } from "react";
+import { useStore } from "../../store.js";
+import Warning from "../Warning/Warning";
+import Loading from "../Loading/Loading";
+import NavBar from "../NavBar/NavBar";
+import { useCheckDomain } from "../../services/checkDomain.js";
+import "./App.css";
 
 function App() {
-  const { domain, isMalicious, isLoading, error, setDomain,
-    setIsMalicious, setIsLoading, setError } = useStore(store);
-
-  useEffect(() => {
-    // function to check if the domain is malicious when the domain changes
-
-    async function checkDomain() {
-      setIsLoading(true);
-      const result = await checkMalicious(token, domain);
-      if (result.error) {
-        setError(result.error);
-
-        return;
-      } else {
-        // if the result > 50, then the domain is malicious
-        setIsMalicious(result.data.level > 50);
-
-      }
-      setIsLoading(false);
+  // get the state from the store
+  const 
+    {
+      domain,
+      isLoading,
+      error,
+      isMalicious,
+      setIsMalicious,
+      setIsLoading,
+      setError,
+      token,
     }
-    checkDomain();
-  }, [domain]);
+    = useStore();
+  const checkDomain = useCheckDomain();
+  useEffect(() => {
+    // function to check if the domain is malicious when the domain change
 
+    // checkDomain();
+  }, [domain, setIsMalicious, setIsLoading, setError, token]);
 
   return (
     <>
-      {isLoading ? (
-       //if the request is loading, display a loading component
+      {/* {isLoading ? (
+        //if the request is loading, display a loading component
         <Loading />
       ) : error ? (
         // if there is an error, display the error
@@ -42,15 +38,12 @@ function App() {
       ) : isMalicious ? (
         // if the domain is malicious, display the warning component
         <Warning />
-      ) : (
-        // Sinon, afficher le titre de l'extension
-        <h1 className="text-center text-2xl md:text-3xl my-px font-lobster">
-          Fishbuster
-        </h1>
-      )}
+      ) : ( */}
+  
+        <NavBar />
+      {/* )} */}
     </>
   );
-  
 }
 
-export default App
+export default App;

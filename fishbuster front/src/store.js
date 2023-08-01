@@ -5,9 +5,11 @@ export const useStore = create((set )=> ({
     isMalicious: false,
     isLoading: false,
     error: null,
+    token: null,
     setDomain: (domain) => set({ domain }),
-    setIsMalicious: (isMalicious) => set({ isMalicious }),
     setIsLoading: (isLoading) => set({ isLoading }),
+    setToken: (token) => set({ token }),
+    setIsMalicious: (isMalicious) => set({ isMalicious }),
     setError: (error) => set({ error }),   
 }));
 
