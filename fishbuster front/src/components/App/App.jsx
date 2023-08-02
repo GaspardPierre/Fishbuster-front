@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useStore } from "../../store.js";
 import Warning from "../Warning/Warning";
 import Loading from "../Loading/Loading";
-import NavBar from "../NavBar/NavBar";
+import Home from "../../Pages/Home.jsx";
 import { useCheckDomain } from "../../services/checkDomain.js";
 import "./App.css";
 
@@ -40,7 +40,7 @@ function App() {
         <Warning />
       ) : ( */}
   
-        <NavBar />
+        <Home />
       {/* )} */}
     </>
   );
