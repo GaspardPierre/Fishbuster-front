@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import { useStore } from "../../store.js";
-import Warning from "../Warning/Warning";
-import Loading from "../Loading/Loading";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Warning from "../Warning/Warning";
+// import Loading from "../Loading/Loading";
 import Home from "../../Pages/Home.jsx";
 import { useCheckDomain } from "../../services/checkDomain.js";
+import ErrorPage from "../../Pages/ErrorPage.jsx";
+import Fishbuster from "../../Pages/Fishbuster.jsx";
+import About from "../../Pages/About.jsx";
 import "./App.css";
 
 function App() {
@@ -40,8 +44,18 @@ function App() {
         <Warning />
       ) : ( */}
   
-        <Home />
+        {/* <Home /> */}
       {/* )} */}
+
+      <BrowserRouter>
+      <Home />
+      <Routes>
+        <Route path="/fishbuster" element={<Fishbuster />} />
+        <Route path="/apropos" element={<About />} />
+        <Route path="*" element={<ErrorPage />} /> {/* Route d'erreur pour toutes les routes non définies */}
+      </Routes>
+    </BrowserRouter>
+  );
     </>
   );
 }

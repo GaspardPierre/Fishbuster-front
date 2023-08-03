@@ -1,6 +1,6 @@
 import React from "react";
 import { Search } from "lucide-react";
-import logo from "../../assets/Fishbuster.png";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -13,8 +13,8 @@ export default function NavBar() {
           <div className=" w-full ml-3 py-4 flex-col bg-slate-100 h-8 rounded-2xl  md:flex-row md:w-2/3 md:ml-6"></div>
         </div>
         <div className=" w-5/6 flex items-center justify-between md:w-1/3">
-          <span className="text-white text-lg  py-4">Fishbuster</span>
-          <span className="text-white text-lg  py-4">A propos</span>
+          <Link to="/fisbuster" className="text-white text-lg  py-4">Fishbuster</Link>
+          <Link to="/about" className="text-white text-lg  py-4">A propos</Link>
         </div>
       </nav>
     </div>
