@@ -1,8 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-=======
 @tailwind utilities;
 
 body{
@@ -56,4 +53,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
->>>>>>> 0c0cfcf06cec77cf7dbdb40f7924c12b8ec656d6

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useStore } from "../../store.js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route , Navigate} from "react-router-dom";
 // import Warning from "../Warning/Warning";
 // import Loading from "../Loading/Loading";
 import Home from "../../Pages/Home.jsx";
@@ -9,6 +9,7 @@ import ErrorPage from "../../Pages/ErrorPage.jsx";
 import Fishbuster from "../../Pages/Fishbuster.jsx";
 import About from "../../Pages/About.jsx";
 import "./App.css";
+import DomainInput from "../DomainInput/DomainInput.jsx";
 
 function App() {
   // get the state from the store
@@ -48,14 +49,16 @@ function App() {
       {/* )} */}
 
       <BrowserRouter>
-      <Home />
+     
       <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/domaininput" element={<DomainInput />} />
         <Route path="/fishbuster" element={<Fishbuster />} />
         <Route path="/apropos" element={<About />} />
         <Route path="*" element={<ErrorPage />} /> {/* Route d'erreur pour toutes les routes non définies */}
       </Routes>
     </BrowserRouter>
-  );
+ 
     </>
   );
 }
