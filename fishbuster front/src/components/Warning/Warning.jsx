@@ -1,7 +1,7 @@
 import React from 'react'
 import { AlertTriangle } from   'react-feather';
 
-export default function Warning() {
+export default function Warning({domain}) {
   return (
 <<<<<<< HEAD
     <div className=' bg-red-800 '>
