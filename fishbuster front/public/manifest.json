@@ -1,0 +1,21 @@
+{
+    "name" :"Fishbuster",
+    "description" :"Scan any domain name with our AI to find out if the domain is on!",
+    "version" :"1.0",
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "http://*/*",
+        "https://*/*"
+      ],
+      "action" : {
+        "default_title" :"Fisbuster",
+        "default_popup" :"index.html",
+        "default_icon" :{
+
+       "16" :"logo.png",
+       "128" :"logo.png"
+      }
+
+      }
+}
