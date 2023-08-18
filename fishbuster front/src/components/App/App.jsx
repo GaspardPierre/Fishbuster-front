@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Warning from "./Warning/Warning";
+import Warning from "../Warning/Warning"
+<Warning />
 
 function App() {
   const [isMalicious, setIsMalicious] = useState(false);

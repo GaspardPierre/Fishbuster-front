@@ -5,21 +5,20 @@
   "version": "1.0",
   "permissions": [
       "tabs",
-      "webNavigation",
-      "https://fisbuster.org/*",
-      "http://*/*",
-      "https://*/*"
+      "webNavigation"
+  ],
+  "host_permissions": [
+      "https://fisbuster.org/*"
   ],
   "action": {
       "default_title": "Fisbuster",
       "default_popup": "./popup.html",
       "default_icon": {
-          "16": "logo16.png",
-          "128": "logo128.png"
+          "16": "./logo.png",
+          "128": "./logo.png"
       }
   },
   "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "service_worker": "background.js"
   }
 }
