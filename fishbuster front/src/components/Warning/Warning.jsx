@@ -5,7 +5,7 @@ export default function Warning({domain}) {
   return (
     <div className='w-full h-screen bg-red-800  '>
       <div className='w-full h-screen flex flex-col justify-center items-center'>
-        <h1 className='font-bold text-4xl md:text-5xl mdtext-center my-px font-lobster'>Attention !!!</h1>
+        <h1 className='font-bold text-4xl md:text-5xl md:text-center my-px font-lobster'>Attention !!!</h1>
       
         <AlertTriangle 
         className='text-center'

@@ -1,27 +1,25 @@
 {
-    "name" :"Fishbuster",
-    "description" :"Scan any domain name with our AI to find out if the domain is on!",
-    "version" :"1.0",
-    "permissions": [
-        "tabs",
-        "webNavigation",
-        "https://fisbuster.org/*",
-        "http://*/*",
-        "https://*/*"
-      ],
-      "action" : {
-        "default_title" :"Fisbuster",
-        "default_popup" :"index.html",
-        "default_icon" :{
-
-       "16" :"logo.png",
-       "128" :"logo.png"
-      },
-      "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    }
-    
-
+  "manifest_version": 3,
+  "name": "Fishbuster",
+  "description": "Scan any domain name with our AI to find out if the domain is on!",
+  "version": "1.0",
+  "permissions": [
+      "tabs",
+      "webNavigation",
+      "https://fisbuster.org/*",
+      "http://*/*",
+      "https://*/*"
+  ],
+  "action": {
+      "default_title": "Fisbuster",
+      "default_popup": "./popup.html",
+      "default_icon": {
+          "16": "logo16.png",
+          "128": "logo128.png"
       }
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  }
 }

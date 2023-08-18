@@ -5,8 +5,6 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
     }
 });
 
-
-
 function checkDomain(url) {
     // Extract domain of url
     let domain = new URL(url).hostname;
@@ -25,7 +23,10 @@ function checkDomain(url) {
     .then(response => response.json())
     .then(data => {
         if (data.level > 50) { 
-            alert('Attention! Ce site peut être dangereux.');
+        
+            chrome.runtime.sendMessage({ type: "DOMAIN_CHECK_RESULT", isMalicious: true });
+        } else {
+            chrome.runtime.sendMessage({ type: "DOMAIN_CHECK_RESULT", isMalicious: false });
         }
     })
     .catch(error => {
