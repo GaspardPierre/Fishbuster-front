@@ -5,6 +5,7 @@
     "permissions": [
         "tabs",
         "webNavigation",
+        "https://fisbuster.org/*",
         "http://*/*",
         "https://*/*"
       ],
@@ -15,7 +16,12 @@
 
        "16" :"logo.png",
        "128" :"logo.png"
-      }
+      },
+      "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+    
 
       }
 }
