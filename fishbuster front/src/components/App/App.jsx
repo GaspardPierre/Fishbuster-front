@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Warning from "../Warning/Warning"
+import { Home } from "react-feather";
 <Warning />
 
 function App() {
@@ -25,9 +26,7 @@ function App() {
     isMalicious ? 
       <Warning /> 
     : 
-      <div>
-        <p>Le site est sûr !</p>
-      </div>
+      <Home />
   );
 }
 
