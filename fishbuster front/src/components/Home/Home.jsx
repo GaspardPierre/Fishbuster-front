@@ -1,6 +1,6 @@
 
 import fishbuster from"../../../public/Fisbuster.png"
-import Bubble from "../Buble/Buble";
+import Bubble from "../Bubble/Bubble";
 function Home() {
     const bubbleCount = new Array(10).fill(null);
 
