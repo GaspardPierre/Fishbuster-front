@@ -1,8 +1,8 @@
 
-import fishbuster from"../../../public/Fisbuster.png"
+import fishbuster from"../../../public/Fishbuster.png"
 import Bubble from "../Bubble/Bubble";
 function Home() {
-    const bubbleCount = new Array(10).fill(null);
+
 
     return (
         <div className="relative h-screen overflow-hidden">

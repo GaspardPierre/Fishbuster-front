@@ -7,7 +7,7 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
 
 function checkDomain(url) {
     // Extract domain of url
-    let domain = new URL(url).hostname;
+   /*let domain = new URL(url).hostname;
 
     // Send request to the backend
     fetch('https://fisbuster.org/api/v1/malicious', {
@@ -31,5 +31,6 @@ function checkDomain(url) {
     })
     .catch(error => {
         console.error('Erreur lors de la vérification du domaine:', error);
-    });
+    });*/
+    chrome.runtime.sendMessage({ type: "DOMAIN_CHECK_RESULT", isMalicious: false });
 }
