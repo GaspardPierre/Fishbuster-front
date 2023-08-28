@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './components/Home/Home.jsx'
+import App from '../src/components/App/App'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home />
+    <App />
   </React.StrictMode>,
 )
 

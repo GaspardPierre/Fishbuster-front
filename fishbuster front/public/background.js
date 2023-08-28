@@ -32,5 +32,8 @@ function checkDomain(url) {
     .catch(error => {
         console.error('Erreur lors de la vérification du domaine:', error);
     });*/
-    chrome.runtime.sendMessage({ type: "DOMAIN_CHECK_RESULT", isMalicious: false });
+    setTimeout(() => {
+        chrome.runtime.sendMessage({ type: "DOMAIN_CHECK_RESULT", isMalicious: false });
+      }, 1000); // Attendre 1 seconde
+      
 }

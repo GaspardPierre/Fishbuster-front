@@ -1,42 +1,49 @@
 
 import fishbuster from"../../../public/Fishbuster.png"
 import Bubble from "../Bubble/Bubble";
+import {useSpring, animated } from 'react-spring';
 function Home() {
 
 
-    return (
-        <div className="relative h-screen overflow-hidden">
-         {Array.from({ length: 10 }).map((_, index) => (
-          <Bubble key={index} />
-        ))}
-       <div className="flex flex-col items-center justify-center h-screen space-y-4 bg-blue-500">
-  <div className="flex  justify-center">
-    <img src={fishbuster} className="w-1/3"/>
-  </div>
+  const fishbusterProps = useSpring({
+    from: { transform: 'translateX(100%)' }, // Part de l'extérieur de l'écran (à gauche)
+    to: { transform: 'translateX(0%)' },
+  // Arrive à sa position finale
+    config: { tension: 200, friction: 50},
+    delay: 2000, // Contrôle la vitesse et le rebond de l'animation
+  });
+  return (
+    <div className="relative h-screen overflow-hidden">
+     {Array.from({ length: 10 }).map((_, index) => (
+      <Bubble key={index} />
+    ))}
+   <div className="flex flex-col items-center justify-center h-screen space-y-4 bg-blue-500">
+   <animated.div style={fishbusterProps} className="flex justify-center">
+          <img src={fishbuster} className="w-1/3" />
+        </animated.div>
+<h1 className="text-xl font-bold">
+Fishbuster
+</h1>
 
-  <h1 className="text-xl font-bold">
-    Fishbuster
-  </h1>
+<p className="text-base">
+Seuil d'activation 55%
+</p>
 
-  <p className="text-base">
-    Seuil d'activation 55%
-  </p>
-
-  <div className="flex space-x-4">
-    <button className="bg-blue-700 px-4 py-2 rounded-md">
-      Sites bloqués
-    </button>
-    <button className="bg-blue-700 px-4 py-2 rounded-md">
-      Paramètres
-    </button>
-    <button className="bg-blue-700 px-4 py-2 rounded-md">
-      Signaler ce site
-    </button>
-  </div>
+<div className="flex space-x-4">
+<button className="bg-blue-700 px-4 py-2 rounded-md">
+  Sites bloqués
+</button>
+<button className="bg-blue-700 px-4 py-2 rounded-md">
+  Paramètres
+</button>
+<button className="bg-blue-700 px-4 py-2 rounded-md">
+  Signaler ce site
+</button>
 </div>
 </div>
+</div>
 
-  );
+);
 }
   
    
