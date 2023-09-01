@@ -21,22 +21,22 @@ function Home() {
    <animated.div style={fishbusterProps} className="flex justify-center">
           <img src={fishbuster} className="w-1/3" />
         </animated.div>
-<h1 className="text-xl font-bold">
+<h1 className="text-xl font-bold z-50">
 Fishbuster
 </h1>
 
-<p className="text-base">
+<p className="text-base -z-50">
 Seuil d'activation 55%
 </p>
 
 <div className="flex space-x-4">
-<button className="bg-blue-700 px-4 py-2 rounded-md">
+<button className="bg-blue-700 px-4 py-2 rounded-md z-50">
   Sites bloqués
 </button>
-<button className="bg-blue-700 px-4 py-2 rounded-md">
+<button className="bg-blue-700 px-4 py-2 rounded-md z-50">
   Paramètres
 </button>
-<button className="bg-blue-700 px-4 py-2 rounded-md">
+<button className="bg-blue-700 px-4 py-2 rounded-md -z-50">
   Signaler ce site
 </button>
 </div>
