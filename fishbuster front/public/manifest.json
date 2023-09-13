@@ -25,7 +25,9 @@
   "background": {
       "service_worker": "./public/background.ts"
   }
+}
+
   
 
   
-}
+

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Warning from "./Warning";
 import Home  from "./Home";
-import "../index.css"
+import "../../index.css"
 
 
 
