@@ -4,7 +4,7 @@ import bubbleImage from '../../public/bubble.png';
 
 function Bubble() {
   // Generate random size for each bubble
-  const [size, setSize] = useState(Math.random() * (60 - 10) + 10); // Size between 10 and 60px
+  const [size, setSize] = useState(Math.random() * (40 - 10) + 10); // Size between 10 and 0px
 
   // Generate random duration for each bubble
   const randomDuration = Math.random() * (6000 - 1000) + 1000; // Duration between 1 and 6s

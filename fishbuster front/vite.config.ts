@@ -3,7 +3,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import react from "@vitejs/plugin-react-swc";
 import { ManifestV3Export, crx } from "@crxjs/vite-plugin";
 import manifestJson from "./public/manifest.json";
-import postcss from './postcss.config.cjs';
 import eslint from 'vite-plugin-eslint';
 
 
@@ -19,12 +18,12 @@ export default defineConfig({
      react(),
       eslint(),
       crx({ manifest }),
-      postcss]
+     ]
       ,
   build: {
     rollupOptions: {
       input: {
-        popup: './popup.html',
+        popup: './index.html',
       
       }
     }

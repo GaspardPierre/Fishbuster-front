@@ -14,7 +14,7 @@ function Home() {
     delay: 2000, // Contrôle la vitesse et le rebond de l'animation
   });
   return (
-    <div className="relative h-screen overflow-hidden bg_blue-600">
+    <div className="relative h-screen overflow-hidden bg-blue-600">
      {Array.from({ length: 10 }).map((_, index) => (
       <Bubble key={index} />
     ))}
