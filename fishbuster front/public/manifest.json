@@ -23,7 +23,7 @@
     "128": "logo.png"
   },
   "background": {
-      "service_worker": "background.js"
+      "service_worker": "./public/background.ts"
   }
   
 

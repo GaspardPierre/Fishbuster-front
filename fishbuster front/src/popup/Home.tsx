@@ -1,7 +1,8 @@
 
-import fishbuster from"../../../public/Fishbuster.png"
-import Bubble from "../Bubble/Bubble";
+import fishbuster from"../../public/Fishbuster.png";
+import Bubble from "./Bubble";
 import {useSpring, animated } from 'react-spring';
+
 function Home() {
 
 
@@ -19,7 +20,7 @@ function Home() {
     ))}
    <div className="flex flex-col items-center justify-center h-screen space-y-4 bg-blue-500">
    <animated.div style={fishbusterProps} className="flex justify-center">
-          <img src={fishbuster} className="w-1/3" />
+          <img src={fishbuster} alt="fishbuster avatar" className="w-1/3" />
         </animated.div>
 <h1 className="text-xl font-bold z-50">
 Fishbuster

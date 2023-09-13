@@ -33,6 +33,7 @@ function checkDomain(url) {
         console.error('Erreur lors de la vérification du domaine:', error);
     });*/
     setTimeout(() => {
+        console.log('Hey check Domain is called');
         chrome.runtime.sendMessage({ type: "DOMAIN_CHECK_RESULT", isMalicious: false });
       }, 1000); // Attendre 1 seconde
       
