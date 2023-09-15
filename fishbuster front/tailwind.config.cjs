@@ -1,5 +1,6 @@
-// /** @type {import('tailwindcss').Config} */
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports  = {
+  important: '#root',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,7 +10,7 @@ export default {
       'sail': ['Sail', 'cursive'],
       'roboto': ['Roboto', 'sans-serif'],
       'montserrat': ['Montserrat', 'sans-serif'],
-      'font-pixel': ['Press Start 2P', 'cursive'], // Ajout de la nouvelle police ici
+      'font-pixel': ['"Press Start 2P"', 'cursive'], // Ajout de la nouvelle police ici
     },
     extend: {},
   },

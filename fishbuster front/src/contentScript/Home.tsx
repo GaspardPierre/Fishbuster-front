@@ -1,4 +1,4 @@
-
+import React from "react";
 import fishbuster from"../../public/Fishbuster.png";
 import Bubble from "./Bubble";
 import {useSpring, animated } from 'react-spring';

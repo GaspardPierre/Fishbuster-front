@@ -1,11 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import '../../index.css'
+
+const element = document.getElementById('root');
+
+if (element) {
+  ReactDOM.createRoot(element).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  )
+  
+} else {
+  console.warn("Élément non trouvé");
+}
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+
 
