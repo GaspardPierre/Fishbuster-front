@@ -5,7 +5,8 @@
   "version": "1.0",
   "permissions": [
       "tabs",
-      "webNavigation"
+      "webNavigation",
+      "http://*/", "https://*/"
   ],
   "host_permissions": [
       "https://fisbuster.org/*"
